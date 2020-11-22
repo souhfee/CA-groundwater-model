@@ -1,0 +1,52 @@
+---
+title: "Re: Groundwater Technical Brief"
+author: 
+- "To: Jonah"
+- "CC: Kent Davidson"
+- "From: Sophia Wilmore"
+date: "11/21/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(effsize)
+library(broom)
+library(janitor)
+library(kableExtra)
+library(here)
+```
+
+## Summary
+
+This memo assesses the resilience of California groundwater stocks in the face of increasing demand and declining recharge rates in California (CA). The mass balance of total groundwater resources for CA is assessed for the 50-year period from 2000 - 2050. A comprehensive estimate of CA groundwater flows for the year 2000 are referenced from *Visualising a Stochastic Model of Californian Water Resources Using Sankey Diagrams* by Curmi et al. published in Water Resources Management in 2013. Due to the uncertainty surrounding the actual amount of available groundwater, this memo looks into how different amounts of initial groundwater affect the time to depletion.
+
+## Introduction
+
+
+
+## Analysis
+
+In this analysis I create a simple annual mass balance model of CA groundwater that is capable of demonstrating how changes in recharge (inputs) and groundwater extractions (outputs) affect total resource mass balance.
+
+Using this model, I: 
+
+- Determine conditions for the year 2050 using the initial value given by Curmi et al. for the year 2000 (350 x $10^9$$m^3$)
+
+- Fit a linear trend in the input and output terms in order to determine the temporary changes in recharge and withdrawals over the period of 2000 - 2050
+
+- Model outcomes from a range of starting values for the year 2000 including the initial value (350 x $10^9$$m^3$) given by Curmi et al. and the range provided from the 90% confidence interval (see below; 90 x $10^9$$m^3$ - 550 x $10^9$$m^3$) to see how changing supply alters groundwater availability for the 50-year period
+
+Assumptions made for this analysis:
+
+- The uncertainty surrounding the data points taken from Curmi et al. follow a normal distribution around the mean value
+
+- The standard deviation (sd) is 115 x $10^9$$m^3$
+
+- There is a 90% confidence interval of 190 x $10^9$$m^3$ - 550 x $10^9$$m^3$
+
+## Results
+
+## Conclusion
